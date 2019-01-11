@@ -9,12 +9,12 @@ sgMail.setApiKey(config.SENDGRID_API_KEY);
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.post('/', function (req, res) {
-  const msgText = 'From: ' + req.body.name + ':<br>' + req.body.text;
+  const msgHTML = req.body.text + '<br>From: ' + req.body.name + '<br>Email: ' + req.body.email;
   const msg = {
     to: config.TO_ADDRESS,
     from: config.FROM_ADDRESS,
     subject: req.body.subject,
-    text: msgText
+    html: msgHTML
   };
   if(req.body.name && req.body.subject && req.body.text) {
     sgMail.send(msg);
