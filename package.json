@@ -1,0 +1,29 @@
+{
+  "name": "mailman",
+  "version": "1.0.0",
+  "description": "Sends email.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminjenkins1/mailman.git"
+  },
+  "keywords": [
+    "email",
+    "sendgrid",
+    "express"
+  ],
+  "author": "Benjamin Jenkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminjenkins1/mailman/issues"
+  },
+  "homepage": "https://github.com/benjaminjenkins1/mailman#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4"
+  }
+}
